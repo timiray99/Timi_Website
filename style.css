@@ -67,7 +67,7 @@
     flex-direction: column;
     width: 60%;
   }
-  h1,p{
+  h1,p,ul{
     color: #EADDCA;
   }
   h1{
@@ -76,24 +76,6 @@
   .header_info p{
     width: 80%
   }
-  .btns:hover{
-    background-color: #C19A6B;
-    border: 1px solid #C19A6B;
-    font-weight: 500
-  }
-.btns:hover i{
-  background-color: #C19A6B !important;
-}
-.btns{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.btn1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .header_img{
   display: flex;
   justify-content: center;
