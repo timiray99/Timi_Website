@@ -351,10 +351,19 @@ footer .social-links a:hover {
     top: 60px; /* Adjust top value to fit below the navbar */
     left: 0;
     z-index: 100;
+    list-style: none;
   }
 
   .navbar.active .menu {
     display: flex; /* Show the menu when active */
+    flex-direction: column;  /* Stack items vertically */
+    position: absolute;
+    top: 60px;  /* Adjust based on navbar height */
+    left: 0;
+    right: 0;
+    background-color: #6F4E37; /* Same as navbar */
+    padding: 1rem;
+    z-index: 999; /* Ensure it appears on top */
   }
 
   .hamburger {
