@@ -72,6 +72,56 @@
   border-radius: 50%;
 }
 
+/* About Section */
+.about {
+  padding: 2rem;
+  background: #F9F0E1;
+}
+
+.about h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Timeline */
+.timeline {
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.timeline-item {
+  background: #F3EAD8;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Skills Section */
+.skills {
+  padding: 2rem;
+  background: #D8C2A2;
+}
+
+.skills ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.skills li {
+  background: #EADDCA;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+
 /* Section Titles */
 section h2 {
   font-size: 2rem;
@@ -149,4 +199,24 @@ footer .social-links a:hover {
   color: #721c24;
   background-color: #f8d7da;
   border: 1px solid #f5c6cb;
+}
+
+/* Mobile Styling */
+@media screen and (max-width: 768px) {
+  .navbar .menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
 }
