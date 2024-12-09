@@ -1,73 +1,132 @@
-/* General Reset */
+s
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-
-.container {
-  width: 90%;
-  margin: auto;
-  max-width: 1200px;
+  font-family: 'Arial', sans-serif;
 }
 
 /* Navbar */
 .navbar {
-  background: #333;
-  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
+  background: #6F4E37;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar .menu {
   display: flex;
   list-style: none;
-}
-
-.navbar .menu li {
-  margin-left: 2rem;
+  gap: 1.5rem;
 }
 
 .navbar .menu li a {
-  color: #fff;
   text-decoration: none;
-  font-size: 1.2rem;
+  color: #EADDCA;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
 .navbar .menu li a:hover {
-  color: #f4a261;
+  color: #F3EAD8;
 }
 
 /* Hero Section */
 .hero {
   display: flex;
-  justify-content: center;
   align-items: center;
-  background: #f4a261;
-  padding: 4rem 0;
-  color: #333;
-  text-align: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background: #EADDCA;
 }
 
-/* Skills */
-.skills-list {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: #6F4E37;
 }
 
-.skill {
-  text-align: center;
+.hero-content p {
+  margin: 1rem 0;
+  color: #4B3022;
 }
 
-.skill i {
+.hero-content .btn {
+  background: #6F4E37;
+  color: #EADDCA;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.hero-content .btn:hover {
+  background: #4B3022;
+}
+
+.hero-image img {
+  width: 250px;
+  border-radius: 50%;
+}
+
+/* Section Titles */
+section h2 {
   font-size: 2rem;
-  color: #f4a261;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Contact Form */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.contact form input,
+.contact form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact form .btn {
+  background: #6F4E37;
+  color: #EADDCA;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact form .btn:hover {
+  background: #4B3022;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #6F4E37;
+  color: #EADDCA;
+}
+
+footer .social-links {
+  margin-top: 1rem;
+}
+
+footer .social-links a {
+  margin: 0 0.5rem;
+  color: #EADDCA;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+  color: #F3EAD8;
 }
