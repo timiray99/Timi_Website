@@ -129,34 +129,67 @@ section h2 {
   margin-bottom: 1rem;
 }
 
-/* Contact Form */
+/* Contact Section */
+.contact {
+  padding: 2rem;
+  background: #6F4E37; /* Added a background color */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 600px;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #F3EAD8; /* Text color for header */
+  margin-bottom: 1.5rem;
+}
+
 .contact form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  width: 80%;
-  margin: 0 auto;
+  gap: 1.5rem;
+}
+
+.contact form label {
+  font-size: 1rem;
+  color: #EADDCA;
 }
 
 .contact form input,
 .contact form textarea {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
+  padding: 1rem;
   border-radius: 5px;
+  border: 1px solid #F3EAD8; /* Lighter border for input fields */
+  background: #FFF; /* White background for form inputs */
+  color: #4B3022; /* Darker text for readability */
+  font-size: 1rem;
 }
 
-.contact form .btn {
-  background: #6F4E37;
-  color: #EADDCA;
-  border: none;
-  padding: 0.5rem;
-  cursor: pointer;
-  transition: background 0.3s;
+.contact form input:focus,
+.contact form textarea:focus {
+  border-color: #4B3022; /* Darker border on focus */
+  outline: none;
 }
 
-.contact form .btn:hover {
-  background: #4B3022;
+.contact .btn {
+  background: #F3EAD8; /* Lighter button background */
+  color: #6F4E37; /* Dark text for the button */
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  text-align: center;
+  transition: background 0.3s ease-in-out, transform 0.2s ease;
 }
+
+.contact .btn:hover {
+  background: #F3EAD8;
+  color: #4B3022;
+  transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
 
 /* Footer */
 footer {
@@ -182,11 +215,12 @@ footer .social-links a:hover {
 }
 /* Feedback Message */
 .feedback {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   padding: 1rem;
   border-radius: 5px;
   font-size: 1rem;
   text-align: center;
+  color: #F3EAD8;
 }
 
 .feedback.success {
@@ -218,5 +252,10 @@ footer .social-links a:hover {
 
   .hero-content h1 {
     font-size: 2rem;
+  }
+
+  .contact {
+    width: 100%;
+    padding: 1.5rem;
   }
 }
