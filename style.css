@@ -9,7 +9,7 @@
 /* Navbar */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;s
   align-items: center;
   padding: 1rem 2rem;
   background: #6F4E37;
@@ -37,6 +37,7 @@
 
 /* Hero Section */
 .hero {
+  min-height: 100vh; 
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -52,6 +53,10 @@
 .hero-content p {
   margin: 1rem 0;
   color: #4B3022;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .hero-content .btn {
@@ -77,6 +82,8 @@
   color: #F3EAD8;
   padding: 2rem;
   background: #6F4E37;
+  padding: 4rem;
+  height: 600px;
   
 }
 
@@ -85,29 +92,104 @@
   font-size: 1.5rem;
 }
 
-/* Timeline */
+.experiences {
+  background-color: #EADDCA; /* Light background color */
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the section */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.experiences h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #4B3022;
+  margin-bottom: 1.5rem;
+}
+
 .timeline {
+  position: relative;
   padding: 2rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  margin-left: 20px;
 }
 
 .timeline-item {
-  background: #F3EAD8;
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #6F4E37;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 20px;
+  width: 12px;
+  height: 12px;
+  background-color: #4B3022; /* Custom bullet point color */
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #fff; /* Creates a ring around the dot */
 }
 
 .timeline-item h3 {
+  font-size: 1.8rem;
+  color: #EADDCA;
   margin-bottom: 0.5rem;
 }
 
+.timeline-item .date {
+  font-size: 1rem;
+  color: #EADDCA;
+  margin-bottom: 1rem;
+  text-align: center; /* Centers the date horizontally */
+}
+
+.timeline-item p {
+  font-size: 1rem;
+  color: #EADDCA;
+  line-height: 1.5;
+  text-align: center; /* Ensures the paragraph text is centered */
+}
+
+
+@media (min-width: 768px) {
+  .experiences {
+    padding: 4rem 3rem; /* Adjust padding for larger screens */
+  }
+
+  .timeline {
+    padding-left: 40px; /* Add extra padding for larger screens */
+  }
+
+  .timeline-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .timeline-item p {
+    width: 60%;
+  }
+
+  .timeline-item .date {
+    width: 30%;
+    text-align: right;
+  }
+}
 /* Skills Section */
 .skills {
   padding: 2rem;
   background: #D8C2A2;
+  color: #4B3022;
+  margin-bottom: 0;
 }
 
 .skills ul {
@@ -123,8 +205,15 @@
   border-radius: 20px;
 }
 
+.skills h2 {
+  margin-top: -10px; /* Adjust the value to move the text up */
+}
 
 /* Section Titles */
+section {
+  padding-top: 6rem; /* Adjust based on your navbar height */
+}
+
 section h2 {
   font-size: 2rem;
   text-align: center;
@@ -134,10 +223,10 @@ section h2 {
 /* Contact Section */
 .contact {
   padding: 2rem;
-  background: #6F4E37; /* Added a background color */
+  background: #5e422e; 
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 2rem auto;
+  margin: 0 auto;
   width: 90%;
   max-width: 600px;
 }
@@ -248,49 +337,94 @@ footer .social-links a:hover {
   color: #6F4E37; /* Change color on hover */
 }
 
-
-/* Mobile Styling */
+/* mobile styling */
 @media screen and (max-width: 768px) {
+  /* Navbar adjustments for mobile */
   .navbar .menu {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .hero {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .contact {
-    width: 100%;
-    padding: 1.5rem;
-  }
-  .hamburger {
-    display: block; /* Show on smaller screens */
-  }
-
-  .navbar .menu {
-    display: none; /* Hide the menu */
+    display: none; /* Hide the menu by default */
     flex-direction: column;
     gap: 1rem;
     background: #6F4E37;
     width: 100%;
     padding: 1rem;
     position: absolute;
-    top: 60px;
+    top: 60px; /* Adjust top value to fit below the navbar */
     left: 0;
     z-index: 100;
   }
 
   .navbar.active .menu {
-    display: flex; /* Display when active */
+    display: flex; /* Show the menu when active */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger icon on small screens */
+    font-size: 2.5rem;
+    color: #F3EAD8;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    z-index: 1001;
+  }
+
+  .hamburger:hover {
+    color: #6F4E37; /* Change color on hover */
+  }
+
+  /* Hero Section */
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .hero-content h1 {
+    font-size: 2rem; /* Adjust font size */
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 200px; /* Smaller image for mobile */
+    margin: 1rem 0;
+  }
+
+  /* Contact Section */
+  .contact {
+    width: 100%;
+    padding: 1.5rem; /* Adjust padding */
+  }
+
+  /* Experiences Section */
+  .experiences {
+    padding: 2rem 1rem; /* Adjust padding */
+  }
+
+  .timeline {
+    padding: 1rem 0;
+  }
+
+  .timeline-item {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center; /* Center content for mobile */
+  }
+
+  .timeline-item h3 {
+    font-size: 1.5rem; /* Adjust font size */
+  }
+
+  .timeline-item p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .timeline-item .date {
+    font-size: 0.9rem; /* Adjust font size */
+    margin-top: 0.5rem;
+  }
+
+  /* Skills Section */
+  .skills ul {
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center;
   }
 }
-

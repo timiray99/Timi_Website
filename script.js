@@ -48,6 +48,7 @@ const menu = document.querySelector('.menu');
 hamburger.addEventListener('click', () => {
     menu.classList.toggle('active');
 });
+
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contact-form");
     const feedback = document.getElementById("feedback");
