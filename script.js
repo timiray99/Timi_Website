@@ -46,7 +46,7 @@ const hamburger = document.querySelector('.hamburger');
 const menu = document.querySelector('.menu');
 
 hamburger.addEventListener('click', () => {
-    menu.classList.toggle('show');
+    menu.classList.toggle('active');
 });
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contact-form");
