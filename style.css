@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Pacifico';
 }
 
 /* Navbar */
@@ -74,8 +74,10 @@
 
 /* About Section */
 .about {
+  color: #F3EAD8;
   padding: 2rem;
-  background: #F9F0E1;
+  background: #6F4E37;
+  
 }
 
 .about h3 {
